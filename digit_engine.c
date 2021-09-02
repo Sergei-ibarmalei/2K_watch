@@ -71,12 +71,19 @@ void fill_digit_by_coord(box_t* digit, plot_t* coords, digit_position_t position
         for(;;)
         {
                 if(ptr_digit ==&digit[arr_length]) break;
-                ptr_digit->box_upleft = *ptr_coord; 
-                ptr_digit->box_upleft.x = digit_center_x + ptr_digit->box_upleft.x;
+                /*ptr_digit->box_upleft = *ptr_coord; 
+                ptr_digit->box_upleft.x = digit_center_x + ptr_digit->box_upleft.x; 
                 ptr_digit->box_upleft.y = digit_center_y + ptr_digit->box_upleft.y;
                 ptr_digit->box_rectangle.x =ptr_digit->box_upleft.x;
                 ptr_digit->box_rectangle.y = ptr_digit->box_upleft.y;
+                ptr_digit->box_rectangle.w = ptr_digit->box_rectangle.h = SIDE;*/
+
+                ptr_digit->box_rectangle.x = ptr_coord->x + digit_center_x;
+                ptr_digit->box_rectangle.y = ptr_coord->y + digit_center_y;
+                /*ptr_digit->box_rectangle.x += digit_center_x;
+                ptr_digit->box_rectangle.y += digit_center_y;*/
                 ptr_digit->box_rectangle.w = ptr_digit->box_rectangle.h = SIDE;
+
 
                 switch(pos)
                 {

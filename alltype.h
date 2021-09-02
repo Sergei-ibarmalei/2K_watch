@@ -105,20 +105,11 @@ typedef struct
 {
         int count_step;
         box_position_t box_position;
-        plot_t box_upleft;
+        /*plot_t box_upleft;*/
         SDL_Rect box_rectangle;
         color_t box_color;
-        plot_t* bezje_path_arr;
-        plot_t p0, p1, p2, p3;
+        
 }box_t;
-
-typedef struct
-{
-        box_t* back_digit_hl;
-        box_t* back_digit_hr;
-        box_t* back_digit_ml;
-        box_t* back_digit_mr;
-} back_digit_t;
 
 typedef struct
 {

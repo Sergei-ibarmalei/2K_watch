@@ -51,7 +51,6 @@ void sdl_check_status(sdl_statusType status)
 sdl_statusType sdl_init(sdlType* psdl, char* name, int s_width, int s_height)
 {
   sdl_statusType status = SDL_STATUS_OK;
-
   /* Инициализация SDL */
   if(SDL_Init(SDL_INIT_VIDEO) < 0)
   {
@@ -103,12 +102,13 @@ sdl_statusType sdl_init(sdlType* psdl, char* name, int s_width, int s_height)
       }
     }
   }
+
   return status;
 }
 
 void sdl_clearscreen(sdlType* pmysdl)
 {
-        SDL_SetRenderDrawColor(pmysdl->gRenderer, 0x00, 0x00, 0x00, 0xFF);
+        SDL_SetRenderDrawColor(pmysdl->gRenderer, 0x0, 0x0, 0x0, 0xFF);
         SDL_RenderClear(pmysdl->gRenderer);
 }
 

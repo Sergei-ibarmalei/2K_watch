@@ -60,9 +60,10 @@ int main(int argc, char** argv)
                 return 1;
         }
         program_status = APP_ON;
+
+        SDL_ShowCursor(SDL_DISABLE);
         while(program_status)
         {
-
                 ke_check_key_pressing(&e, &program_status);
 
                 sdl_clearscreen(&mysdl);
